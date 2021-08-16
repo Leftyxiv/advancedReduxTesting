@@ -13,7 +13,7 @@ const CommentBox = () => {
         <h4>Add a comment</h4>
         <textarea value={input} onChange={(e) => setInput(e.target.value)}/>
         <div>
-          <button onChange={handleSubmit}>Submit</button>
+          <button onClick={handleSubmit}>Submit</button>
         </div>
       </form>
     </div>
