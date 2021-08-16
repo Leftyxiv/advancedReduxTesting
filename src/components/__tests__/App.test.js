@@ -18,3 +18,4 @@ it("shows the comment box comment component", () => {
 it("shows the comment list component", () => {
   expect(wrapper.find(CommentList).length).toBe(1);
 });
+
