@@ -9,7 +9,7 @@ let component;
 beforeEach(() => {
   component = mount(
   <Root>
-  <CommentBox />
+    <CommentBox />
   </Root> );
 });
 
