@@ -7,7 +7,7 @@ const CommentBox = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.saveComment(input.trim());
+    props.saveComment(input);
     setInput('');
   }
   return (
