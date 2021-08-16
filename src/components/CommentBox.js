@@ -16,9 +16,10 @@ const CommentBox = (props) => {
         <h4>Add a comment</h4>
         <textarea value={input} onChange={(e) => setInput(e.target.value)}/>
         <div>
-          <button onClick={handleSubmit}>Submit</button>
+          <button id='submit' onClick={handleSubmit}>Submit</button>
         </div>
       </form>
+      <button id='fetchComment' onClick={props.fetchComments}>Fetch Comments</button>
     </div>
   )
 }

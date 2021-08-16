@@ -17,9 +17,9 @@ afterEach(() => {
   component.unmount();
 });
 
-it("has a text area and a button", () => {
+it("has a text area and two buttons", () => {
   expect(component.find("textarea").length).toBe(1);
-  expect(component.find("button").length).toBe(1);
+  expect(component.find("button").length).toBe(2);
 });
 
 describe("the text area", () => {
@@ -34,7 +34,7 @@ describe("the text area", () => {
 
   it("clears out the text area after the form is submitted", () => {
     component.update();
-    component.find("button").simulate("click");
+    component.find("#submit").simulate("click");
     component.update();
     expect(component.find("textarea").prop("value")).toBe("");
   });
