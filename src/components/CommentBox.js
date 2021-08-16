@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const CommentBox = () => {
+  const [input, setInput] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setInput('');
+  }
   return (
     <div>
-      CommentBox
+      <form>
+        <h4>Add a comment</h4>
+        <textarea value={input} onChange={(e) => setInput(e.target.value)}/>
+        <div>
+          <button onChange={handleSubmit}>Submit</button>
+        </div>
+      </form>
     </div>
   )
 }
