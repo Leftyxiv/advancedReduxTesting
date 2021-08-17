@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
 
 const CommentBox = (props) => {
   const [input, setInput] = useState('');
 
+  useEffect(() => {
+    if (!props.auth) {
+      props.history.push('/');
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.auth]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     props.saveComment(input);
     setInput('');
   }
+
   return (
     <div>
       <form>
@@ -23,5 +31,6 @@ const CommentBox = (props) => {
     </div>
   )
 }
+
 
 export default connect(null, actions)(CommentBox);
