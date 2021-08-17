@@ -11,4 +11,4 @@ export default ({ dispatch }) => (next) => (action) => {
     const newAction = { ...action, payload: res };
     dispatch(newAction);
   });
-}
+};
